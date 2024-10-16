@@ -1,14 +1,19 @@
+
 body {
   font-family: Arial, sans-serif;
 }
 
 nav {
   background-color: #f8f9fa;
-  padding: 10px;
+  margin: 0px;
+  padding:10px;
+  position: sticky;
+
 }
 
 nav a {
   text-decoration: none;
+  
 }
 
 h1 {
@@ -17,15 +22,18 @@ h1 {
 #home,#contact,#about{
   border: 1px solid blue ;
   margin: 20px;
+  border-radius: 10px;
   min-height: 40vh;
   padding: 12px;
   justify-content: justify;
 }
 nav ul{
-  text-decoration: none;
+  text-decoration:none;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  
+
 }
 hr,h2{
   margin: 0;
@@ -37,10 +45,15 @@ hr{
 header{
   color: #007bff;
   background-color: #f8f9fa;
+  position:sticky;
+  top:0;
+  margin: 0;
+
+
 }
 header:hover{
   color: #f8f9fa;
-  background-color: #007bff;
+  background-color: #f8f9fa;
 }
 nav ul li a:hover,li .link:hover{
   text-decoration: none;
@@ -50,4 +63,22 @@ nav ul li a:hover,li .link:hover{
   color: #f8f9fa;
   background-color: #007bff;
   padding: 14px;
-};
+
+}
+.logo {
+  display:flex;
+  flex-direction: row; 
+  align-items: center;    
+  justify-content: center; 
+  height: 150px;          
+  text-align: center;      
+  padding: 20px;  
+  background-color:white;        
+}
+.logo img{
+  width: 400px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.logo:hover{
+  background-color: #f8f9fa;};
