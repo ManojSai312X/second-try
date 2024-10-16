@@ -1,53 +1,129 @@
 body {
   font-family: Arial, sans-serif;
+  background-color: #f4f7f8;
+  color: #333;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 400px;
+  height: auto;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Hidden on larger screens */
 }
 
 nav {
-  background-color: #f8f9fa;
+  background-color: #007bff;
+  margin: 0;
   padding: 10px;
+  position: sticky;
+  top: 0;
+  transition: max-height 0.3s ease;
 }
 
-nav a {
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
   text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #0056b3;
+}
+
+nav.open ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#home, #contact, #about {
+  border: 1px solid #007bff;
+  margin: 20px;
+  border-radius: 10px;
+  min-height: 60vh;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
+  color: #007bff;
 }
-#home,#contact,#about{
-  border: 1px solid blue ;
-  margin: 20px;
-  min-height: 40vh;
-  padding: 12px;
-  justify-content: justify;
+
+.hero-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
 }
-nav ul{
-  text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-hr,h2{
-  margin: 0;
-  text-align: center;
-}
-hr{
+
+hr {
+  margin: 20px 0;
   opacity: 50%;
 }
-header{
-  color: #007bff;
-  background-color: #f8f9fa;
+
+#contact, #about {
+  background-color: #e9ecef;
 }
-header:hover{
-  color: #f8f9fa;
-  background-color: #007bff;
+
+ul {
+  padding-left: 20px;
 }
-nav ul li a:hover,li .link:hover{
-  text-decoration: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  color: #f8f9fa;
-  background-color: #007bff;
-  padding: 14px;
-};
+
+ul li {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      display: none; /* Initially hidden on mobile */
+  }
+
+  .menu-toggle {
+      display: block; /* Show toggle button on smaller screens */
+  }
+
+  nav.open ul {
+      display: flex; /* Show when open */
+  }
+
+  #home, #contact, #about {
+      margin: 10px; /* Reduced margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+      width: 300px; /* Adjust logo size for mobile */
+  }
+}
