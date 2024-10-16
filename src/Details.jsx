@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import "./sign.css"
 const Details = () => {
     const [formData, setFormData] = useState({ name: '', date: '', time: '', diet: '' });
     const navigate = useNavigate();
@@ -17,6 +17,7 @@ const Details = () => {
     };
 
     return (
+        <div className="contain">
         <form onSubmit={handleSubmit}>
             <input type="text" name="name" placeholder="Name" onChange={handleChange} required />
             <input type="date" name="date" onChange={handleChange} required />
@@ -29,6 +30,7 @@ const Details = () => {
             </select>
             <button type="submit">Submit</button>
         </form>
+        </div>
     );
 };
 

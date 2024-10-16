@@ -17,7 +17,9 @@ form {
 
 input[type="email"],
 input[type="password"] ,
-input[type="text"]{
+input[type="text"],
+input[type="time"],
+input[type="date"],select{
     width: 100%; /* Full width */
     padding: 10px;
     margin: 10px 0; /* Spacing between inputs */
