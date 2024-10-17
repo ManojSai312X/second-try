@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Box, Card, CardBody, Input, FormControl, FormLabel, Button, Stack, Link } from "@chakra-ui/react";
 import api from './Api1.js'; // Ensure the path is correct
 import { useNavigate } from 'react-router-dom';
+import logo from "./docc.webp";
 
 const Signup = () => {
   const [FirstName, setFirstName] = useState('');
@@ -46,7 +47,7 @@ const Signup = () => {
       alignItems="center" 
       justifyContent="center" 
       height="100vh" 
-      backgroundImage="url('docc.webp')" 
+      backgroundImage={`url(${logo})`}
       backgroundSize="cover"
       backgroundPosition="center"
     >

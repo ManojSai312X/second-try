@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Box, Card, CardBody, Input, FormControl, FormLabel, Button, Stack, Link } from "@chakra-ui/react";
 import { useNavigate } from 'react-router-dom';
+import logo from "./docc.webp";
 import api from './Api1.js'; // Ensure the path is correct
+
 const LoginSignup = () => {
     const [formData, setFormData] = useState({ email: '', password: '' });
     const navigate = useNavigate();
@@ -39,7 +41,7 @@ const LoginSignup = () => {
             alignItems="center" 
             justifyContent="center" 
             height="100vh" 
-            backgroundImage="url('docc.webp')" 
+            backgroundImage={`url(${logo})`}
             backgroundSize="cover"
             backgroundPosition="center"
         >
