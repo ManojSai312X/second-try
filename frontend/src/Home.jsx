@@ -23,7 +23,7 @@ const Home = () => {
             </header>
             <nav className={`nav1 ${navOpen ? 'open' : ''}`}>
                 <ul type='none'>
-                    <li><Link to="/">Home</Link></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#about">About</a></li>
                     <li><Link to="/login-signup" className='link'>Sign In</Link></li>
