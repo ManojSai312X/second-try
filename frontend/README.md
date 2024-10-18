@@ -10,3 +10,6 @@ command to run the project;
 
 ### To use those photos just use
 import "./path"
+
+### To install Chakra UI in front end
+npm install @chakra-ui/react @emotion/react @emotion/styled framer-motion
